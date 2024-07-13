@@ -111,7 +111,7 @@ const skills= {
   ]
 };
 
-const resume = () => {
+const Resume = () => {
   return (
     <motion.div initial={{opacity:0}} animate={{
       opacity:1,
@@ -240,4 +240,4 @@ const resume = () => {
     </motion.div> )
 }
 
-export default resume
+export default Resume

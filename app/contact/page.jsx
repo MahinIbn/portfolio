@@ -24,7 +24,7 @@ const info = [
   },
 ]
 
-const contact = () => {
+const Contact = () => {
   return (
     <motion.section 
     initial={{ opacity: 0}}
@@ -82,4 +82,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

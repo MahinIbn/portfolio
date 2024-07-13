@@ -25,7 +25,7 @@ const service = [
 
 ]
 
-const services = () => {
+const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -60,4 +60,4 @@ const services = () => {
   )
 }
 
-export default services
+export default Services
