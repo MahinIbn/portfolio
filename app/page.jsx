@@ -16,8 +16,7 @@ const home = () => {
             <h1 className="h1 mb-6">
               Hello, I'm<br/> <span className="text-accent">Maheen Shoeb</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white">My expertise lies in Software Development and Deep Learning
-              where I have demonstrated success in multiple projects. Welcome to my portfolio!</p>
+            <p className="max-w-[500px] mb-9 text-white">Welcome to my portfolio! I'm passionate about pushing the boundaries of technology through innovative Software Development and cutting-edge Deep Learning. </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="https://drive.google.com/drive/folders/16cbxNJ1ok7JK7wBopLFF19rEFqlAuEKG?usp=drive_link">
                 <Button variant="outline" size="lg"
@@ -42,6 +41,9 @@ const home = () => {
 
       </div>
       <Stats/>
+      <div className="sm:hidden flex flex-col justify-between items-center text-center p-4">
+        <h2 className="text-sm font-semibold text-accent">Explore the side navigation bar for more.</h2>
+      </div>
     </section>
   )
 }

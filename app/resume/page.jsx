@@ -34,7 +34,7 @@ const about ={
     },
     {
       fieldname:"Languages",
-      fieldValue:"English, Arabic, Urdu"
+      fieldValue:"English, Arabic"
     },
       
   ]
@@ -57,7 +57,7 @@ const experience = {
     },
     {
       company: "Khalifa University X Technology Innovation Institute (contract)",
-      position: "Machine Learning Engineer",
+      position: "Machine Learning Engineering",
       duration: "August 2023 - May 2024"
     },
   ]
