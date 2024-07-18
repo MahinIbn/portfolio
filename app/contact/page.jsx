@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const info = [
   {
@@ -25,6 +26,32 @@ const info = [
 ]
 
 const Contact = () => {
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+            access_key: "ed358525-fb45-425c-b347-e84e79374989",
+            name: e.target.fname.value,
+            lastname: e.target.lname.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+        }),
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+        window.location.reload();
+    }
+}
+
+
+
   return (
     <motion.section 
     initial={{ opacity: 0}}
@@ -33,30 +60,30 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>  
-              <p className="text-white/60">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum atque numquam, rerum at eum ipsum dolore obcaecati fugit ali</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input type="firstname" placeholder="Firstname"/>
-              <Input type="lasttname" placeholder="Lastname"/>
-              <Input type="email" placeholder="Email Address"/>
-              <Input type="phone" placeholder="Phone Number"/>
-            </div>
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a service"/>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Select a service</SelectLabel>
-                  <SelectItem value="est">Software Development</SelectItem>
-                  <SelectItem value="cst">Machine Learning</SelectItem>
-                  <SelectItem value="mst">Data Analytics</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            <Textarea className="h-[200px]" placeholder="Type your message here"/>
-            <Button size="md" className="max-w-40">Send Message</Button>
+              <p className="text-white/60">Drop me an email.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input name="fname" type="firstname" placeholder="Firstname"/>
+                <Input name="lname" type="lasttname" placeholder="Lastname"/>
+                <Input name="email" type="email" placeholder="Email Address"/>
+                {/* <Input name="phone" type="phone" placeholder="Phone Number"/> */}
+              </div>
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select role"/>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Select role</SelectLabel>
+                    <SelectItem value="est">Software Development</SelectItem>
+                    <SelectItem value="cst">Machine Learning</SelectItem>
+                    <SelectItem value="mst">Data Analytics</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <Textarea name="message" className="h-[200px]" placeholder="Type your message here"/>
+              <Button size="md" className="max-w-40">Send Message</Button>
             </form> 
           </div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">

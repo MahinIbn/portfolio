@@ -6,20 +6,20 @@ const service = [
   {
     num: '01',
     title: 'Machine Learning Specialization',
-    desciption: "A certification from Stanford University on machine learning algorithms.",
-    href:""
+    desciption: "A certification from Stanford University on Supervised Machine Learning, Unsupervised Learning, Advanced Learning Algorithms, Recommenders, and Reinforcement Learning.",
+    href:"https://www.coursera.org/account/accomplishments/specialization/ECXKR9Z7T9LY"
   },
   {
     num: '02',
     title: 'Generative AI with LLMs',
-    desciption: "A certification from DeepLearning.AI on large language Models.",
-    href:""
+    desciption: "A certification from DeepLearning.AI on foundational knowledge, practical skills of how large language mmdels works.",
+    href:"https://www.coursera.org/account/accomplishments/verify/NE48CTUKKMUS"
   },
   {
     num: '03',
-    title: 'Deep Learning Specialization',
-    desciption: "A certification from Stanford University on deep learning algorithms.",
-    href:""
+    title: 'Google Data Analytics: Foundations',
+    desciption: "Certification covers foundational concepts in data analytics, analytical thinking, and practical skills with spreadsheets, query languages, and data visualization.",
+    href:"https://www.coursera.org/account/accomplishments/verify/Y2GE8AW94PM8"
   },
 
 
@@ -41,7 +41,7 @@ const Services = () => {
               className="flex-1 flex flex-col justify-center gap-6 group">
                 <div className="w-full flex justify-between items-center">
                   <div className="text-5xl font-extrabold text-outline
-                  text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
+                  text-transparent transition-all duration-500">{service.num}</div>
                   <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white
                   group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                   <BsArrowDownRight className="text-primary text-3xl"/>

@@ -10,8 +10,8 @@ const stat = [
         text: "Projects Experience",
     },
     {
-        num:7,
-        text: "Technologies masterd",
+        num:8,
+        text: "Technologies mastered",
     },
     {
         num: 100,

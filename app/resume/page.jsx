@@ -1,7 +1,8 @@
 "use client"
 import { Description } from '@radix-ui/react-dialog';
 import {FaHtml5, FaCss3, FaJs, FaReact, FaAngular, FaPython, FaJava} from 'react-icons/fa';
-import {SiTailwindcss, SiNextdotjs } from 'react-icons/si';
+import {SiTailwindcss, SiNextdotjs, SiTensorflow, SiPytorch, SiPandas , SiScikitlearn   } from 'react-icons/si';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
@@ -9,50 +10,55 @@ import { ScrollArea } from '@radix-ui/react-scroll-area';
 
 const about ={
   title:"About Me",
-  Description:"Lorem  corporis similique aut ut architecto nam ipsa aperiam iusto voluptatem blanditiis recusandae culpa repellendus! Veniam, corporis? Magnam, voluptas!",
+  Description:"",
   info: [
     {
-      fieldname:"Name",
+      fieldname:"Name:",
       fieldValue:"Maheen Shoeb"
     },
     {
-      fieldname:"Email",
+      fieldname:"Email:",
       fieldValue:"mahinshoeb16@gmail.com"
     },
     {
-      fieldname:"Experience",
+      fieldname:"Experience:",
       fieldValue:"2+ Years"
     },
     {
-      fieldname:"Freelance",
+      fieldname:"Freelance:",
       fieldValue:"Available"
+    },
+    {
+      fieldname:"Residency",
+      fieldValue:"UAE Golden visa holder"
     },
     {
       fieldname:"Languages",
       fieldValue:"English, Arabic, Urdu"
     },
+      
   ]
 };
 
 const experience = {
   icon: "/assets/badge.svg",
-  title: "My experince",
-  description: "Lorem ipsum dolor  culpa repellendus! Veniam, culpa repellendus! Veniam, corporis? Magnam, voluptas!",
+  title: "My experiences",
+  description: "Experience in software development and deep learning, with a proven track record of success in multiple projects.",
   items: [
     {
-      company: "Khalifa University",
-      position: "Research Assistant",
-      duration: "January 2024 - Present"
+      company: "Khalifa University (full-time)",
+      position: "Research Assistant (Software & LLM)",
+      duration: "January 2024 - July 2024"
     },
     {
-      company: "AIQ",
+      company: "AIQ (full-time)",
       position: "Software Engineering Intern",
       duration: "Summer 2023"
     },
     {
-      company: "AIQ",
-      position: "Software Engineering Intern",
-      duration: "Summer 2023"
+      company: "Khalifa University X Technology Innovation Institute (contract)",
+      position: "Machine Learning Engineer",
+      duration: "August 2023 - May 2024"
     },
   ]
 };
@@ -60,27 +66,28 @@ const experience = {
 const education = {
   icon: "/assets/cap.svg",
   title: "My education",
-  description: "Lorem Veniam, corporis? aut ut architecto nam  Magnam, voluptas!",
+  description: "",
   items: [
     {
       institution: "Khalifa University",
-      degree: "Computer Science",
-      duration: "August 2020 - Agusut 2024"
+      degree: "BSc. in Computer Science",
+      duration: "August 2020 - August 2024"
     },
+
   ]
 };
 
 const skills= {
   title: "My skills",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis similique aut ut ex ullam dignissimos architecto nam ipsa aperiam iusto voluptatem blanditiis recusandae culpa repellendus! Veniam, corporis? Magnam, voluptas!",
+  description: "Experienced in multiple frontend, machine learning, deep learning technologies.",
   skillset: [
     {
       icon: <FaHtml5/>,
       name: "html 5",
     },
     {
-      icon: <FaCss3/>,
-      name: "css 3",
+      icon: <FaReact/>,
+      name: "react",
     },
     {
       icon: <FaJs/>,
@@ -105,6 +112,22 @@ const skills= {
     {
       icon: <SiNextdotjs/>,
       name: "next.js",
+    },
+    {
+      icon: <SiScikitlearn/>,
+      name: "Scikitlearn",
+    },
+    {
+      icon: <SiPandas/>,
+      name: "Pandas",
+    },
+    {
+      icon: <SiPytorch/>,
+      name: "Pytorch",
+    },
+    {
+      icon: <SiTensorflow/>,
+      name: "Tensorflow",
     },
 
 

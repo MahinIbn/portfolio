@@ -14,34 +14,65 @@ import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 const projects = [
   {
     num:"01",
-    category: "frontend",
+    category: "Full stack AI content creator",
     title: "project 1",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque beatae officia corporis esse aliquam, est facilis dolores ",
-    stack: [{ name:"Html 5"}, {name:"Css 3"}, {name:"Javascript"}],
-    image: "/myportfolio/public/assets/hd.png",
-    live:"",
-    github: "",
+    description: "A full-stack web application for social media contect generation using NextJs framework, and Google's Gemini API.",
+    stack: [{name: "Next.js"}, {name:"Tailwind.css"}, {name:"Typescript"}, {name: "Postgres SQL"}],
+    image: "/assets/content-gen.png",
+    live:"https://content-gen-ai.vercel.app/",
+    github: "https://github.com/MahinIbn/ContentGenAI",
   },
   {
     num:"02",
-    category: "Data Analytics",
+    category: "Full stack AI trip planner",
     title: "project 2",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque beatae officia corporis esse aliquam, est facilis dolores ",
-    stack: [{ name:"Python"}],
-    image: "/assests/hd.png",
-    live:"",
-    github: "",
+    description: "A full-stack application using React framework, powered by Gemini API for hotel recommendation, trip planning and daily itinerary suggestion.",
+    stack: [{ name:"React.js"}, {name:"Tailwind.css"}],
+    image: "/assets/trip-rec.png",
+    live:"https://travel-planner-ai-ivory.vercel.app/",
+    github: "https://github.com/MahinIbn/travel-planner-ai",
   },
   {
     num:"03",
-    category: "fullstack",
-    title: "project 1",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque beatae officia corporis esse aliquam, est facilis dolores ",
-    stack: [{ name:"Next.js"}, {name:"Tailwind.css"}],
-    image: "/assests/hd.png",
+    category: "E-commerce Application ",
+    title: "project 3",
+    description: "An e-commerce application developed in Java using object orient programming principles, featuring product listings, shopping cart management, and payment processing.",
+    stack: [{ name:"Java"}],
+    image: "/assets/oop.png",
     live:"",
-    github: "",
+    github: "https://github.com/MahinIbn/Gift-Store",
   },
+  {
+    num:"04",
+    category: "Machine Learning Project",
+    title: "project 4",
+    description: "Machine Learning based malware detection and classification using native and custom Android permissions as features.",
+    stack: [{ name:"Python"},{ name:"pandas"},{ name:"sklearn"},{ name:"matplotlib"},],
+    image: "/assets/ml.png",
+    live:"",
+    github: "https://github.com/MahinIbn/ML-based-malware-detection-for-Android",
+  },
+  {
+    num:"05",
+    category: "Deep Learning Project",
+    title: "project 4",
+    description: "LSTM and GRU deep learning models for improving quality-of-service in mobile adhoc networks.",
+    stack: [{ name:"Python"},{ name:"pandas"},{ name:"numpy"},{ name:"tensorflow-keras"},{ name:"sklearn"},{ name:"seaborn"},{ name:"matplotlib"},],
+    image: "/assets/olsr.png",
+    live:"",
+    github: "https://github.com/MahinIbn/QOS-OLSR-ML",
+  },
+  {
+    num:"06",
+    category: "Data Analytics Project",
+    title: "project 4",
+    description: "Data Analytics of New York City Taxi Trips.",
+    stack: [{ name:"Python"},{ name:"pandas"},{ name:"numpy"},{ name:"matplotlib"},],
+    image: "/assets/data-analytics.png",
+    live:"",
+    github: "https://github.com/MahinIbn/Taxi-Trip-Analytics",
+  },
+
 ]
 
 const Work = () => {
@@ -67,7 +98,7 @@ const Work = () => {
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                 <p className="text-white/60">{project.description}</p>
-                <ul className="flex gap-4">
+                <ul className="flex flex-wrap gap-4">
                   {project.stack.map((item, index) => {
                     return (
                       <li key={index} className="text-xl text-accent">
@@ -81,6 +112,7 @@ const Work = () => {
                 
                 <div className="flex items-center gap-4">
                   
+                  {project.live ?
                   <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -92,7 +124,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                  </Link>
+                  </Link> :<></>}
 
                   <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
@@ -117,8 +149,8 @@ const Work = () => {
                     <SwiperSlide key={index} className="w-full" >
                       <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                         <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
-                        <div className="relative w-full h-full">
-                          <Image src={project.image} fill className="object-cover alt-"/>
+                        <div className="relative w-full h-full bg-[#1c1c22]">
+                          <Image src={project.image} fill className="object-scale-down"/>
                         </div>
                       </div>
                       </SwiperSlide> 
