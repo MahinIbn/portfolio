@@ -12,9 +12,9 @@ const home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left">
-            <span className="text-xl">Software Engineer</span>
+            <span className="text-xl">Software & AI Engineer</span>
             <h1 className="h1 mb-6">
-              Hello, I'm<br/> <span className="text-accent">Maheen Shoeb</span>
+              Hello, I'm<br/> <span className="text-accent">Maheen.</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white">Welcome to my portfolio! I'm passionate about pushing the boundaries of technology through innovative Software Development and cutting-edge Deep Learning. </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">

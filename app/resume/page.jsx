@@ -34,7 +34,7 @@ const about ={
     },
     {
       fieldname:"Languages",
-      fieldValue:"English, Arabic"
+      fieldValue:"English, Arabic, Urdu"
     },
       
   ]
@@ -47,7 +47,7 @@ const experience = {
   items: [
     {
       company: "Khalifa University (full-time)",
-      position: "Research Assistant (Software & LLM)",
+      position: "Research Assistant (Deep Learning)",
       duration: "January 2024 - July 2024"
     },
     {
@@ -56,8 +56,8 @@ const experience = {
       duration: "Summer 2023"
     },
     {
-      company: "Khalifa University X Technology Innovation Institute (contract)",
-      position: "Machine Learning Engineering",
+      company: "Khalifa University X Technology Innovation Institute",
+      position: "ML Engineering (contract)",
       duration: "August 2023 - May 2024"
     },
   ]
@@ -72,6 +72,11 @@ const education = {
       institution: "Khalifa University",
       degree: "BSc. in Computer Science",
       duration: "August 2020 - August 2024"
+    },
+    {
+      institution: "Stanford University",
+      degree: "Machine Learning Specialization",
+      duration: "June 2024 - July 2024"
     },
 
   ]

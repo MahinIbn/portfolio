@@ -11,12 +11,18 @@ const service = [
   },
   {
     num: '02',
-    title: 'Generative AI with LLMs',
-    desciption: "A certification from DeepLearning.AI on foundational knowledge, practical skills of how large language mmdels works.",
-    href:"https://www.coursera.org/account/accomplishments/verify/NE48CTUKKMUS"
+    title: 'Deep Learning Specialization',
+    desciption: "A certification from DeepLearning.AI that encompasses building neural networks like CNN, RNN, and Transformers for real-world applications like speech recognition, chatbots, translations and more.",
+    href:"https://www.coursera.org/account/accomplishments/specialization/VLI7P9P3NEC1"
   },
   {
     num: '03',
+    title: 'Generative AI with LLMs',
+    desciption: "A certification from DeepLearning.AI on foundational knowledge, practical skills of how large language models works, including various finetuning and prompt engineering techniques.",
+    href:"https://www.coursera.org/account/accomplishments/verify/NE48CTUKKMUS"
+  },
+  {
+    num: '04',
     title: 'Google Data Analytics: Foundations',
     desciption: "Certification covers foundational concepts in data analytics, analytical thinking, and practical skills with spreadsheets, query languages, and data visualization.",
     href:"https://www.coursera.org/account/accomplishments/verify/Y2GE8AW94PM8"
