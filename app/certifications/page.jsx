@@ -27,6 +27,12 @@ const service = [
     desciption: "Certification covers foundational concepts in data analytics, analytical thinking, and practical skills with spreadsheets, query languages, and data visualization.",
     href:"https://www.coursera.org/account/accomplishments/verify/Y2GE8AW94PM8"
   },
+  {
+    num: '05',
+    title: 'Data Engineering Specialization',
+    desciption: "Certification covers the stages of the data engineering lifecycle; including generating, ingesting, storing, transforming, and serving data.",
+    href:"https://www.coursera.org/account/accomplishments/specialization/YD8ZFX5IA3OJ"
+  },
 
 
 ]
